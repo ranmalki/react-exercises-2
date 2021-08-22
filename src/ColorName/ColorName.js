@@ -1,5 +1,6 @@
 import React  from 'react';
 import './ColorName.css';
+import Colorize from './Colorize/Colorize'
 
 function ColorName() {
 	return (
@@ -10,8 +11,8 @@ function ColorName() {
 				present the word with the corresponding color.<br /><br />
 				Examples: <span className="color--red">red</span> <span className="color--blue">blue</span>
 			</p>
-
-			{ /* Insert your new component here */ }
+			
+			<Colorize color='green' />
 
 		</div>
 	)

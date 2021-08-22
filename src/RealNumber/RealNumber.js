@@ -1,7 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './RealNumber.css';
 
 function RealNumber() {
+
+
+const [isShown, setIsShown] = useState(true)
+
 	return (
 		<div className="RealNumber">
 			<p>
@@ -11,8 +15,8 @@ function RealNumber() {
 				"A13" - <span className="value--invalid">invalid</span>
 			</p>
 
-			<input type="text" className="text-box" />
-			<button>Submit</button>
+			<input type="text" className="text-box" onChange={(e)=>e.target.value.match(/^[0-9]+$/) != null ? setIsShown(true) : setIsShown(false)} />
+			{isShown && <button >Submit</button>}
 		</div>
 	)
 }
